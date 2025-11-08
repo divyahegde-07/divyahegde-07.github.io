@@ -1,60 +1,49 @@
 languages:
-  - item: Python
-  - item: SQL
-  - item: Apex
-  - item: R
-  - item: TypeScript
-  - item: JavaScript (ES6)
-  - items: Salesforce Lightning Web Components
+  - Python
+  - SQL
+  - R
+  - JavaScript
+  - HTML & CSS
+  - Bash
 
-frameworks & libraries:
-  - item: PyTorch
-  - item: TensorFlow
-  - item: LangChain
-  - item: LangGraph
-  - item: Hugging Face Transformers
-  - item: Scikit-learn
-  - item: Pandas
-  - item: NumPy
-  - item: FastAPI
-  - item: Flask
-  - item: Streamlit
+frameworks/libraries:
+  - PyTorch
+  - TensorFlow
+  - Hugging Face
+  - Scikit-learn
+  - Pandas
+  - NumPy
+  - LangChain
+  - FastAPI
+  - Streamlit
+  - React
 
-tools & platforms:
-  - item: AWS (S3, Lambda, EC2, Bedrock, CloudWatch,Sagemaker, CDK, CloudFormation)
-  - item: Docker
-  - item: Git & GitHub Actions
-  - item: VS Code
-  - item: Jupyter Notebook
-  - item: LangSmith
-  - item: Postman
-  - item: MySQL
-  - item: Redis
+tools: 
+  - Git & GitHub
+  - Docker
+  - AWS (S3, Lambda, EC2)
+  - Redis
+  - MySQL
+  - Jupyter
+  - Weights & Biases
+  - LangSmith
 
-machine learning & AI:
-  - item: Generative AI Systems
-  - item: Natural Language Processing (NLP)
-  - item: RAG Pipelines
-  - item: LLM Fine-tuning & Evaluation
-  - item: Prompt Engineering
-  - item: Model Deployment & MLOps
-  - item: Data Analysis & Visualization
-  - item: Feature Engineering
-  - item: Predictive Modeling
-  - item: A/B Testing & Experimentation
-
-data visualization:
-  - item: Matplotlib
-  - item: Seaborn
-  - item: Plotly
-  - item: Tableau
+AI/ML skills:
+  - Generative AI
+  - LLM Fine-tuning
+  - NLP
+  - Prompt Engineering
+  - RAG Pipelines
+  - Model Deployment
+  - Feature Engineering
+  - Predictive Modeling
+  - Data Visualization
 
 soft skills:
-  - item: Analytical Thinking
-  - item: Problem Solving
-  - item: Cross-functional Collaboration
-  - item: Communication of Technical Concepts
-  - item: Experimentation Mindset
-  - item: Curiosity & Continuous Learning
-  - item: Project Ownership
-  - item: Attention to Detail
+  - Analytical Thinking
+  - Problem Solving
+  - Collaboration
+  - Communication
+  - Experimentation
+  - Curiosity
+  - Project Ownership
