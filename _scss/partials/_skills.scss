@@ -1,45 +1,51 @@
 .skills {
-  // allow the skills section content to expand beyond the global 650px max
+  // Allow the skills section content to expand beyond the global 650px max width only here
   .section__content {
     max-width: none;
   }
 
+  // Stack categories vertically
   .skillz {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    flex-wrap: nowrap;
+    display: block; // Stack categories one below another
+  }
 
-    @include weird-medium {
-      flex-wrap: wrap;
-      gap: 24px;
+  .skillz__category {
+    display: flex; // Create a row layout for each category
+    align-items: center; // Align label and skills vertically
+    gap: 20px; // Space between label and skills lists
+    margin-bottom: 16px; // Space between categories
+
+    &__label {
+      flex: 0 0 200px; // Fixed width for labels
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
     }
 
-    &__category {
-      // Six narrow columns on large screens - adjust the divisor if you have a different number
-      flex: 0 0 calc(100% / 6 - (40px * (1 / 6)));
-      min-width: 150px;
-      margin-bottom: 25px;
+    ul {
+      display: flex; // Place skills inline
+      flex-wrap: wrap; // Wrap skills if they exceed row width
+      gap: 10px 20px; // Space horizontally and vertically between skills
+      margin: 0; // Remove default margin
+      padding: 0; // Remove default list padding
+      list-style: none; // Remove bullet points
+    }
 
-      @include weird-medium {
-        // two columns per row on medium screens
-        flex: 0 0 calc(50% - 12px);
-      }
+    &__item {
+      font-size: 0.95rem;
+      color: $dark-grey;
+      white-space: nowrap; // Prevent awkward line breaks
+    }
 
-      @include mobile {
-        // single column on small screens
-        flex: 0 0 100%;
-      }
+    @include mobile {
+      // On small screens stack label above inline skills
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
 
       &__label {
-        font-weight: 700;
-        color: $black;
-        text-transform: uppercase;
-      }
-
-      &__item {
-        margin: 3px 0;
-        font-size: 0.9rem;
+        width: auto;
+        flex: none;
       }
     }
   }
