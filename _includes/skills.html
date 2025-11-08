@@ -1,40 +1,72 @@
 <section class="section skills">
   <div class="section__title">Skills</div>
   <div class="section__content">
-    <!-- <p>I’ve picked up quite a few skills during the course of my three co-ops, and aim to improve these skills everyday. Here are a few of the technologies that I have experience with:</p> -->
     <div class="skillz">
+      {% if site.data.skills.languages %}
       <div class="skillz__category">
         <div class="skillz__category__label">Languages</div>
         <ul>
           {% for language in site.data.skills.languages %}
-          <li class="skillz__category__item">{{language.item}}</li>
+          <li class="skillz__category__item">{{ language.item }}</li>
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
+
+      {% if site.data.skills['frameworks & libraries'] %}
       <div class="skillz__category">
-        <div class="skillz__category__label">Frameworks</div>
+        <div class="skillz__category__label">Frameworks & Libraries</div>
         <ul>
-          {% for framework in site.data.skills.frameworks %}
-          <li class="skillz__category__item">{{framework.item}}</li>
+          {% for framework in site.data.skills['frameworks & libraries'] %}
+          <li class="skillz__category__item">{{ framework.item }}</li>
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
+
+      {% if site.data.skills['tools & platforms'] %}
       <div class="skillz__category">
-        <div class="skillz__category__label">Tools</div>
+        <div class="skillz__category__label">Tools & Platforms</div>
         <ul>
-          {% for tool in site.data.skills.tools %}
-          <li class="skillz__category__item">{{tool.item}}</li>
+          {% for tool in site.data.skills['tools & platforms'] %}
+          <li class="skillz__category__item">{{ tool.item }}</li>
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
+
+      {% if site.data.skills['machine learning & AI'] %}
       <div class="skillz__category">
-        <div class="skillz__category__label">Design</div>
+        <div class="skillz__category__label">Machine Learning & AI</div>
         <ul>
-          {% for thing in site.data.skills.design %}
-          <li class="skillz__category__item">{{thing.item}}</li>
+          {% for ml in site.data.skills['machine learning & AI'] %}
+          <li class="skillz__category__item">{{ ml.item }}</li>
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
+
+      {% if site.data.skills['data visualization'] %}
+      <div class="skillz__category">
+        <div class="skillz__category__label">Data Visualization</div>
+        <ul>
+          {% for viz in site.data.skills['data visualization'] %}
+          <li class="skillz__category__item">{{ viz.item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if site.data.skills['soft skills'] %}
+      <div class="skillz__category">
+        <div class="skillz__category__label">Soft Skills</div>
+        <ul>
+          {% for soft in site.data.skills['soft skills'] %}
+          <li class="skillz__category__item">{{ soft.item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
