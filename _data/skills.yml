@@ -2,11 +2,12 @@ languages:
   - Python
   - SQL
   - R
+  - Java
   - JavaScript
-  - HTML & CSS
-  - Bash
+  - Apex
+  - LWC
 
-frameworks/libraries:
+libraries:
   - PyTorch
   - TensorFlow
   - Hugging Face
@@ -38,12 +39,3 @@ AI/ML skills:
   - Feature Engineering
   - Predictive Modeling
   - Data Visualization
-
-soft skills:
-  - Analytical Thinking
-  - Problem Solving
-  - Collaboration
-  - Communication
-  - Experimentation
-  - Curiosity
-  - Project Ownership
