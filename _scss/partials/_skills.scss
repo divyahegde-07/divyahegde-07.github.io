@@ -6,7 +6,7 @@
 
   // Stack categories vertically
   .skillz {
-    display: block; // Stack categories one below another
+    display: grid; // Stack categories one below another
   }
 
   .skillz__category {
