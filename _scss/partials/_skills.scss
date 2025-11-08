@@ -1,71 +1,67 @@
-<section class="section skills">
-  <div class="section__title">Skills</div>
-  <div class="section__content">
-    <div class="skillz">
-      {% if site.data.skills.languages %}
-      <div class="skillz__category">
-        <div class="skillz__category__label">Languages</div>
-        <ul>
-          {% for entry in site.data.skills.languages %}
-          <li class="skillz__category__item">
-            {% if entry.item %}{{ entry.item }}{% else %}{{ entry }}{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
+.skills {
+  // allow the skills section content to expand beyond the global 650px max only for skills
+  .section__content {
+    max-width: none;
+  }
 
-      {% if site.data.skills['frameworks/libraries'] %}
-      <div class="skillz__category">
-        <div class="skillz__category__label">Frameworks / Libraries</div>
-        <ul>
-          {% for entry in site.data.skills['frameworks/libraries'] %}
-          <li class="skillz__category__item">
-            {% if entry.item %}{{ entry.item }}{% else %}{{ entry }}{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
+  // stack categories vertically (one category per row)
+  .skillz {
+    display: block;
+  }
 
-      {% if site.data.skills.tools %}
-      <div class="skillz__category">
-        <div class="skillz__category__label">Tools</div>
-        <ul>
-          {% for entry in site.data.skills.tools %}
-          <li class="skillz__category__item">
-            {% if entry.item %}{{ entry.item }}{% else %}{{ entry }}{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
+  .skillz__category {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;               // space between label and items area
+    margin-bottom: 24px;
 
-      {% if site.data.skills['AI/ML skills'] %}
-      <div class="skillz__category">
-        <div class="skillz__category__label">AI / ML Skills</div>
-        <ul>
-          {% for entry in site.data.skills['AI/ML skills'] %}
-          <li class="skillz__category__item">
-            {% if entry.item %}{{ entry.item }}{% else %}{{ entry }}{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
+    // label on the left with fixed width to align rows
+    &__label {
+      flex: 0 0 200px;
+      width: 200px;
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
+      @include tablet {
+        // slightly smaller label on tablet
+        flex: 0 0 160px;
+        width: 160px;
+      }
+    }
 
-      {% if site.data.skills['soft skills'] %}
-      <div class="skillz__category">
-        <div class="skillz__category__label">Soft Skills</div>
-        <ul>
-          {% for entry in site.data.skills['soft skills'] %}
-          <li class="skillz__category__item">
-            {% if entry.item %}{{ entry.item }}{% else %}{{ entry }}{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-</section>
+    // items area (the UL) is a flexible row that wraps
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;      // vertical and horizontal gaps between items
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-items: flex-start;
+    }
+
+    // each item is inline-like and won't break words awkwardly
+    &__item {
+      margin: 0;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      color: $dark-grey;
+    }
+
+    @include mobile {
+      // on small screens stack label above items
+      flex-direction: column;
+      align-items: flex-start;
+
+      &__label {
+        width: auto;
+        flex: none;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        gap: 10px 14px;
+      }
+    }
+  }
+}
